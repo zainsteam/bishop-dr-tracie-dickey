@@ -1,6 +1,10 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+// apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -79,7 +83,7 @@ android {
 
     namespace "com.bishop"
     defaultConfig {
-        applicationId "com.bishop"
+        applicationId 'com.bishop_dr_tracie_dickey'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -116,4 +120,6 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    // implementation project(':react-native-vector-icons')
 }
